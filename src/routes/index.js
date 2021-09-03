@@ -1,9 +1,16 @@
 const express = require('express');
-//Metodo para ingresar rutas
+const getTasks = require('./getTasks');
+const addTask = require('./addTask');
+const deleteTaskById = require('./deleteTaskById');
+const updateTaskById = require('./updateTaskById');
+
+//Metodo para ingresar rutas deleteTask
 const router = express.Router();
 
-router.get("/", (req, res)=>{
-    res.json({messaje:'Hola app'});
-});
+router.get("/", getTasks);
+router.post("/add", addTask);
+router.post("/delete", deleteTaskById);
+router.put("/update/:id", updateTaskById);
+
 
 module.exports = router;
