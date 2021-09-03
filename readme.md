@@ -40,7 +40,7 @@ show collections
 ```
 db.dropDatabase()
 ```
-## Implementación de Mongoose Fuente: youtube fazt
+## Implementación de Mongoose Fuente: [FAZT youtube](https://www.youtube.com/watch?v=3J925fRl_UE&t=3845s)
 
 ### Documentacion: https://mongoosejs.com/
 
