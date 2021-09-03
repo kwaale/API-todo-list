@@ -10,20 +10,27 @@ const updateTaskById = async (req, res) => {
         if(!id) return res.json({
             message:'ID is required'
         })
-        
         const {
             title,
             description,
             status
         } = req.body;
-        console.log('id',id)
-        console.log('title',title)
-        // const task = await Task.findById(id);
-        const task = await Task.findOneAndUpdate({ _id: id }, { title, description, status });
-        return res.json({
-            message:'Tarea actualizada'
-        })
-
+        if(title || description || status){
+            // const task = await Task.findById(id);
+            if(!task) return res.json(
+                {message:'Debe ser un ID existente'}
+                )
+                const task = await Task.findOneAndUpdate({ _id: id }, { title, description, status });
+                console.log('task',task)
+                console.log('task')
+                return res.json({
+                    message:'Tarea actualizada'
+                })
+        }else return res.json({
+            message:'Debe recibir un title, description o status para modicar'
+        });
+        
+        
     } catch (error) {
 
     }

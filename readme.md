@@ -1,42 +1,44 @@
 # Implementación Mongo para una API Rest
 
-### Instalación de MongoDB para Fuente: https://www.jolugama.com/blog/2018/11/24/mongodb-Instalacion/
+### Instalación de MongoDB
 
-## Después de instalar MongoDB
+Fuente: https://www.jolugama.com/blog/2018/11/24/mongodb-Instalacion/
 
-### Inicialmente se conecta a la Base de Datos “test”
+### Después de instalar MongoDB
 
-## Comandos basicos de MongoDB
+Inicialmente se conecta a la Base de Datos “test” proporcionada por mongo.
 
-### Base de datos actual
+### Comandos basicos de MongoDB
+
+Base de datos actual
 ```
 db
 ```
-### Todas las Bases de Datos
+Todas las Bases de Datos
 ```
 show dbs
 ```
-### Muestra algunos comandos
+Muestra algunos comandos
 ```
 help
 ```
-### Muestra comandos para interactuar con la base de datos
+Muestra comandos para interactuar con la base de datos
 ```
 db.help()
 ```
-### Crear o cambiar de Base de datos
+Crear o cambiar de Base de datos
 ```
 use <nombre base de datos>
 ```
-### Crear Coleccion e insertar datos en la Base de Datos
+Crear Coleccion e insertar datos en la Base de Datos
 ```
 db.products.insert({“name”: “primer nombre”})
 ```
-### Mostrar colecciones (“tablas”)
+Mostrar colecciones (“tablas”)
 ```
 show collections
 ```
-### Borrar Base de Datos
+Borrar Base de Datos
 ```
 db.dropDatabase()
 ```
